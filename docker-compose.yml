@@ -1,0 +1,32 @@
+services:
+  api:
+    image: autonomous-ai-engineer:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      OLLAMA_HOST: http://host.docker.internal:11434
+    volumes:
+      - .:/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    image: autonomous-ai-engineer:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: streamlit run frontend/app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "127.0.0.1:18601:8501"
+    environment:
+      AIDE_API_URL: http://api:8000
+    depends_on:
+      - api
+    volumes:
+      - .:/app

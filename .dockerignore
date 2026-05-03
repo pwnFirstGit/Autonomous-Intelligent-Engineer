@@ -1,0 +1,16 @@
+.git
+.newvenv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.mypy_cache
+.streamlit
+repos
+tests
+*.faiss
+*.pkl
+.env
+.DS_Store
