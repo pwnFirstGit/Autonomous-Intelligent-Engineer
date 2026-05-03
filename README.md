@@ -1,4 +1,4 @@
-﻿## 🚀 Autonomous AI Engineer
+﻿## 🚀 Autonomous Intelligent Engineer
 
 AI agent that automatically fixes GitHub issues and opens pull requests.
 
