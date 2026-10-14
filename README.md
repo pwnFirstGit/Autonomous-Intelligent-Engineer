@@ -11,7 +11,7 @@ FastAPI • Streamlit • RAG • LLM Agents • Docker • GitHub API
 
 ## 📸 Demo Walkthrough
 
-### 1. Github File Error(Syntax erro in line 5, 10 and 13)
+### 1. Github File Error(Logical error line 3)
 ![Error File](assets/Image1.png)
 
 ### 2. Issue Input
